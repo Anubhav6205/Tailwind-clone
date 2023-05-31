@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS Clone</title>
+    <script type="module" src="/main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="path/to/output.css" />
+    <style>
+      /* Add custom styles here if needed */
+    </style>
+  </head>
+  <body class="overflow-x-hidden">
+    <div
+      class="min-h-screen min-w-screen bg-[url('https://tailwindcss.com/_next/static/media/blog-post-form-dark@90.5b274bea.jpg')"
+    >
+      <!-- Navbar -->
+      <nav class="flex py-8 px-10 justify-between items-center">
+        <div class="logo flex items-center">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png"
+            class="h-12 w-15 max-w-full"
+            alt=""
+            id="tailwindLogo"
+          />
+          <div class="tailwind-title text-3xl font-semibold mx-2 ">tailwindcss</div>
+        </div>
+        <div class="anchor flex flex-row items-center">
+          <ul class="flex font-bold">
+            <li class="mx-4 text-xl">
+              <a
+                :class="isDarkMode ? 'text-white' : 'text-black'"
+                class="hover:text-blue-500"
+                >Docs</a
+              >
+            </li>
+            <li class="mx-4 text-xl">
+              <a
+                :class="isDarkMode ? 'text-white' : 'text-black'"
+                class="hover:text-blue-500"
+                >Components</a
+              >
+            </li>
+            <li class="mx-4 text-xl">
+              <a
+                :class="isDarkMode ? 'text-white' : 'text-black'"
+                class="hover:text-blue-500"
+                >Blog</a
+              >
+            </li>
+            <li class="mx-4 text-xl">
+              <a
+                :class="isDarkMode ? 'text-white' : 'text-black'"
+                class="hover:text-blue-500"
+                >Showcase</a
+              >
+            </li>
+          </ul>
+          <div class="icons">
+            <i
+              class="fa fa-moon-o mx-4"
+              style="font-size: 30px"
+              class="themeToggle"
+              id="themeToggle"
+            ></i>
+            <i class="fa fa-github" style="font-size: 35px"></i>
+          </div>
+        </div>
+        <style>
+          .rotated-background {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transform: rotate(180deg);
+          }
+        </style>
+      </nav>
+
+      <!-- Hero Section -->
+      <div class="h-screen flex items-start justify-center">
+        <div
+          class="bg-[url('https://tailwindui.com/img/beams-home@95.jpg')] bg-no-repeat bg-cover bg-center w-full h-full absolute z-[-1] rotated-background"
+        ></div>
+
+        <div class="flex items-center justify-center flex-col my-32">
+          <div
+            class="title text-7xl font-extrabold"
+            :class="isDarkMode ? 'text-white' : 'text-black'"
+          >
+            <div>Rapidly build modern websites</div>
+            <div>without ever leaving your HTML.</div>
+          </div>
+          <div
+            class="subtitle my-14 text-2xl "
+   
+          >
+            <div >
+              A utility-first CSS framework packed with classes like
+              <span class="text-blue-750">flex, pt-4, text-center</span> and
+            </div>
+            <div>
+              rotate-90 that can be composed to build any design, directly in
+              your markup.
+            </div>
+          </div>
+          <div class="search flex">
+            <button
+              class="rounded-t-lg rounded-b-lg bg-black px-10 py-5 text-white font-bold mx-8"
+              :class="isDarkMode ? 'bg-black' : 'bg-white'"
+            >
+              Get started
+            </button>
+            <div class="relative flex items-center">
+              <div
+                class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+              >
+                <i
+                  class="fa fa-search"
+                  :class="isDarkMode ? 'text-white' : 'text-gray-400'"
+                ></i>
+              </div>
+              <input
+                class="border border-gray-300 bg-gray-200 px-12 py-5 rounded-t-lg rounded-b-lg focus:outline-none pl-10 text-black"
+                placeholder="Quick search..."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Components -->
+      <div class=" bottom">
+        <!-- Card Section -->
+
+        <div class=" w-screen text-center my-5">
+          <div class="max-w-3xl mx-auto flex flex-col justify-center ">
+            <h2 class="text-5xl font-extrabold text-gray-900 mb-4 ">"Best practices" don't actually work.</h2>
+            <p class="text-lg text-gray-700 my-10 text-center">I’ve written a few thousand words on why traditional "semantic class names" are the reason CSS is hard to maintain, but the truth is you’re never going to believe me until you actually try it. If you can suppress the urge to retch long enough to give it a chance, I really think you’ll wonder how you ever worked with CSS any other way.</p>
+            <p class="text-sm text-gray-700 mt-4">- Adam Wathan</p>
+            <p class="text-sm text-gray-700">Creator of Tailwind CSS</p>
+          </div>
+        </div>
+
+        <div class=" w-screen my-20">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="p-8 bg-white rounded-lg shadow-md">
+                <p class="text-lg text-gray-900">I feel like an idiot for not using Tailwind CSS until now.</p>
+                <p class="text-sm text-gray-700 mt-4">- Ryan Florence</p>
+                <p class="text-sm text-gray-700">Remix & React Training</p>
+              </div>
+              <div class="p-8 bg-white rounded-lg shadow-md">
+                <p class="text-lg text-gray-900">If I had to recommend a way of getting into programming today, it would be HTML + CSS with Tailwind CSS.</p>
+                <p class="text-sm text-gray-700 mt-4">- Guillermo Rauch</p>
+                <p class="text-sm text-gray-700">Vercel</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="bg-gray-800">
+          <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-white mb-4">Constraint-based</h2>
+            <p class="text-lg text-gray-300 mb-4">An API for your design system.</p>
+            <p class="text-sm text-gray-300 mb-4">Utility classes help you work within the constraints of a system instead of littering your stylesheets with arbitrary values. They make it easy to be consistent with color choices, spacing, typography, shadows, and everything else that makes up a well-engineered design system.</p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#" class="text-blue-400 hover:underline">Learn more, utility-first fundamentals</a>
+              <a href="#" class="text-blue-400 hover:underline">Sizing</a>
+              <a href="#" class="text-blue-400 hover:underline">Colors</a>
+              <a href="#" class="text-blue-400 hover:underline">Typography</a>
+              <a href="#" class="text-blue-400 hover:underline">Shadows</a>
+            </div>
+          </div>
+        </div>
+
+        
+        
+        
+        
+
+        <!-- Footer Section -->
+        <footer
+          class="py-8 px-16 border-t border-gray-300 flex items-center justify-between  foot"
+          :class="isDarkMode ? 'border-gray-700' : 'border-gray-300'"
+        >
+          <p
+            class="text-gray-500"
+            :class="isDarkMode ? 'text-white' : 'text-gray-500'"
+          >
+            © 2023 Tailwind CSS Clone. All rights reserved.
+          </p>
+          <ul class="flex space-x-6">
+            <li>
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-700"
+                :class="isDarkMode ? 'text-white' : 'text-gray-500'"
+                >Terms of Service</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-700"
+                :class="isDarkMode ? 'text-white' : 'text-gray-500'"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-700"
+                :class="isDarkMode ? 'text-white' : 'text-gray-500'"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </footer>
+      </div>
+      <script>
+        let isDarkMode = false;
+        const themeToggle = document.getElementById("themeToggle");
+        themeToggle.addEventListener("click", () => {
+          console.log("hi");
+          isDarkMode = !isDarkMode;
+          const background = document.querySelector(".rotated-background");
+          if (isDarkMode) {
+            background.style.backgroundImage =
+              "url('https://tailwindcss.com/_next/static/media/blog-post-form-dark@90.5b274bea.jpg')";
+          } else {
+            background.style.backgroundImage =
+              "url('https://tailwindui.com/img/beams-home@95.jpg')";
+          }
+
+        
+          const navbar = document.querySelector("nav");
+          const title = document.querySelector(".title");
+          const subtitle = document.querySelector(".subtitle");
+          const searchButton = document.querySelector(".search button");
+          const searchIcon = document.querySelector(".search i");
+        
+          const bottom = document.querySelector(".foot");
+          const footer = document.querySelector("footer");
+          const footerText = document.querySelector("footer p");
+          const footerLinks = document.querySelectorAll("footer a");
+          const tailwindTitle=document.querySelector(".tailwind-title");
+
+          if (isDarkMode) {
+            navbar.classList.remove("bg-white");
+            navbar.classList.add("bg-black");
+            navbar.classList.remove("text-black");
+            navbar.classList.add("text-white");
+            title.classList.add("text-white");
+            subtitle.classList.add("text-white");
+            tailwindTitle.classList.add("text-white");
+            tailwindTitle.classList.remove("text-black");
+
+            searchButton.classList.add("bg-sky-600");
+            searchButton.classList.remove("bg-black");
+            bottom.classList.add("bg-black");
+            bottom.classList.remove("bg-white");
+          
+            footer.classList.add("border-gray-900");
+            footer.classList.remove("border-gray-300");
+            footerText.classList.add("text-white");
+            footerText.classList.remove("text-gray-500");
+            footerLinks.forEach((link) => {
+              link.classList.add("text-white");
+              link.classList.remove("text-gray-500");
+            });
+          } else {
+            navbar.classList.remove("bg-black");
+            navbar.classList.add("bg-white");
+            navbar.classList.remove("text-white");
+            navbar.classList.add("text-black");
+            title.classList.remove("text-white");
+            subtitle.classList.remove("text-white");
+            searchButton.classList.remove("bg-sky-600");
+            searchButton.classList.add("bg-black");
+            bottom.classList.remove("bg-black");
+            bottom.classList.add("bg-white");
+            tailwindTitle.classList.remove("text-white");
+            tailwindTitle.classList.add("text-black");
+
+          
+            footer.classList.remove("border-gray-700");
+            footer.classList.add("border-gray-300");
+            footerText.classList.remove("text-white");
+            footerText.classList.add("text-gray-500");
+            footerLinks.forEach((link) => {
+              link.classList.remove("text-white");
+              link.classList.add("text-gray-500");
+            });
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>
